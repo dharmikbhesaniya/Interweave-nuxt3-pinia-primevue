@@ -5,7 +5,7 @@
   <br />
   <div class="p-inputgroup flex-1">
     <span class="p-inputgroup-addon">
-      <i class="pi pi-user">hi</i>
+      <i class="pi pi-user"></i>
     </span>
     <InputText class="border-solid border-orange-500" placeholder="Username" />
   </div>
