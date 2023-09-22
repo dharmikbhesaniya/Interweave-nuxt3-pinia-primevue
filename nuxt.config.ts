@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   quasar: {
     plugins: ["Notify"],
   },
