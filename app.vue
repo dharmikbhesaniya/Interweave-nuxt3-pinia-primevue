@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <h1 class="text-3xl font-bold underline text-red-500">Hello world!</h1>
   </div>
   <br />
@@ -17,7 +17,11 @@
     :loading="loading"
     @click="load"
     class="bg-red-500 text-red-500"
-  />
+  /> -->
+  <Navbar />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 <script setup>
 import { ref } from "vue";

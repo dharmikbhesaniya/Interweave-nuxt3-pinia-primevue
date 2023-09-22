@@ -1,6 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  quasar: {
+    plugins: ["Notify"],
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -12,6 +13,7 @@ export default defineNuxtConfig({
     "primevue/resources/themes/lara-light-blue/theme.css",
   ],
   build: {
-		transpile: ["primevue"]
-	}
+    transpile: ["primevue"],
+  },
+  modules: ["@pinia/nuxt", "nuxt-quasar-ui"],
 });

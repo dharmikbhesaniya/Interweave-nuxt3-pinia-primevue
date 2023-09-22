@@ -27,7 +27,10 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "axios": "^1.5.0",
+    "nuxt-quasar-ui": "^2.0.5",
     "pinia": "^2.1.6",
-    "primevue": "^3.34.1"
+    "primevue": "^3.34.1",
+    "quasar": "^2.12.7"
   }
 }
