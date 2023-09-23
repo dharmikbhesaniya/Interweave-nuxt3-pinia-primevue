@@ -55,4 +55,6 @@ function showCustom() {
     <q-btn color="purple" label="Purple" />
     <q-btn color="black" label="Black" />
   </div>
+  <hr />
+  <Stepper />
 </template>
