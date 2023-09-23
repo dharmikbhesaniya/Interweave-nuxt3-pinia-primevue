@@ -40,7 +40,7 @@ function showCustom() {
     <div class="text-h5 q-pb-md">With Spinner</div>
     <div class="row q-gutter-sm">
       <q-btn color="primary" @click="showDefault" label="Default spinner" />
-      <q-btn color="primary" @click="showCustom" label="Custom spinner" />
+      <q-btn color="primary" @click="showCustom" label="Custom spinner"/>
     </div>
   </div>
   <hr />
