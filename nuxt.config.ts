@@ -9,12 +9,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: [
-    "~/assets/css/main.css",
-    "primevue/resources/themes/lara-light-blue/theme.css",
-  ],
-  build: {
-    transpile: ["primevue"],
-  },
+  css: ["~/assets/css/main.css"],
   modules: ["@pinia/nuxt", "nuxt-quasar-ui"],
 });

@@ -8,5 +8,6 @@ useHead({
 });
 definePageMeta({
   middleware: "user-path-check",
+  layout: "login"
 });
 </script>
