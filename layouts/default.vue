@@ -8,7 +8,7 @@
 
 <script setup></script>
 
-<style scoped> 
+<style scoped>
 .default-layout {
   width: 100vw;
   height: 100vh;
@@ -22,7 +22,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: scroll;
-  width: 800px;
+  width: 1400px;
 }
 .default-content::-webkit-scrollbar {
   display: none;

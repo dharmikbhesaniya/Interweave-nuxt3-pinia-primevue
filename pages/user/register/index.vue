@@ -28,27 +28,26 @@
       <q-linear-progress
         :value="progress"
         size="15px"
-        stripe
+        color="black"
         rounded
-        class="q-mt-md w-[46rem] mb-8"
+        class="q-mt-md w-[40rem] mb-8"
       >
       </q-linear-progress>
       <div class="row">
         <q-btn
           color="primary"
-          :class="progress === 0.2 ? 'hidden' : ''"
-          @click="back()"
+          :disable="progress === 0.2 ? true : false"
+          @click="nextAndBack('back')"
           >Back</q-btn
         >
         <q-space />
-        <q-btn v-if="progress === 1" color="primary" @click="next()"
+        <q-btn
+          v-if="progress === 1"
+          color="primary"
+          @click="nextAndBack('next')"
           >Register</q-btn
         >
-        <q-btn v-else color="primary" @click="next()">Next</q-btn>
-      </div>
-      <div class="hidden">
-        {{ progress == 0.6000000000000001 ? (progress = 0.6) : progress }}
-        {{ progress == 0.39999999999999997 ? (progress = 0.4) : progress }}
+        <q-btn v-else color="primary" @click="nextAndBack('next')">Next</q-btn>
       </div>
     </div>
   </div>
@@ -65,18 +64,19 @@ definePageMeta({
 
 const progress = ref(0.2);
 
-const next = () => {
-  if (progress.value < 1) {
-    progress.value = progress.value + 0.2;
-    return progress.value.toFixed();
-  }
-};
+const nextAndBack = (btn) => {
+  if (btn == "next")
+    progress.value < 1 ? (progress.value += 0.2) : progress.value;
+  else if (btn == "back")
+    progress.value > 0.2 ? (progress.value -= 0.2) : progress.value;
 
-const back = () => {
-  if (progress.value > 0.2) {
-    progress.value = progress.value - 0.2;
-    return progress.value.toFixed();
-  }
+  progress.value == 0.6000000000000001
+    ? (progress.value = 0.6)
+    : progress.value;
+  progress.value == 0.39999999999999997
+    ? (progress.value = 0.4)
+    : progress.value;
+  return progress.value.toFixed();
 };
 </script>
 
