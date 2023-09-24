@@ -53,7 +53,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 useHead({
   title: "Email",
 });
@@ -64,7 +64,7 @@ definePageMeta({
 
 const progress = ref(0.2);
 
-const nextAndBack = (btn) => {
+const nextAndBack = (btn: string) => {
   if (btn == "next")
     progress.value < 1 ? (progress.value += 0.2) : progress.value;
   else if (btn == "back")

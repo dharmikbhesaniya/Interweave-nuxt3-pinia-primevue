@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 useHead({
-    title: "UserName"
+  title: "UserName",
 });
 definePageMeta({
   middleware: "user-path-check",
-  layout: "login"
+  layout: "login",
 });
 </script>
 
 <template>
-    <h2>UserName</h2>
+  <h2>UserName</h2>
 </template>
