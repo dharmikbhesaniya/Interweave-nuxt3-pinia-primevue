@@ -19,8 +19,6 @@
 .default-content {
   text-align: center;
   padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   overflow: scroll;
   width: 1400px;
 }

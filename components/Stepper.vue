@@ -1,118 +1,201 @@
+<!-- ----------------------------progress line divided into 5 parts---------------------------- -->
 <template>
-  <div class="q-pa-md">
-    <!-- <q-stepper
-      v-model="step"
-      ref="stepper"
-      color="primary"
-      animated
-      flat
-      contracted
-      transition-prev="fade"
-      transition-next="fade"
-      :inactive-icon="settings"
-      inactive-color="black"
-      active-color="blue"
-      :contracted="$q.platform.is.mobile"
-    > -->
-    <q-stepper
-      v-model="step"
-      ref="stepper"
-      color="primary"
-      animated
-      flat
-      contracted
-      inactive-icon="white"
+  <div class="main-register flex-1 h-full relative">
+    <div class="register-content flex mb-16">
+      <div class="register-img">
+        <h4>Img</h4>
+      </div>
+      <q-space />
+      <div class="register-form">
+        <component
+          :is="currentComponent"
+          v-if="compIndex < components.length"
+        />
+      </div>
+    </div>
+    {{ components }}
+    <div
+      class="register-progress absolute bottom-0 flex flex-row grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
     >
-      <q-step :name="1" title="Email" :done="step > 1" done-color="green">
-        <!-- {{
-          step === 1 && router.path !== "/user/register"
-            ? navigateTo("/user/register")
-            : ""
-        }} -->
-        <p>Email</p>
-      </q-step>
-
-      <q-step :name="2" title="OTP" :done="step > 2" done-color="green">
-        <!-- {{ step === 2 ? navigateTo("/user/register/otp") : "" }} -->
-        An ad group contains one or more ads which target a shared set of
-        keywords.
-      </q-step>
-
-      <q-step
-        :name="3"
-        title="Personal Details"
-        icon="assignment"
-        :done="step > 3"
-        done-color="green"
+      <q-linear-progress
+        v-for="(val, index) in progressBars"
+        :key="index"
+        :value="val"
+        size="5px"
+        color="deep-purple-6"
+        rounded
+        class="q-mt-md progress-width mb-8"
       >
-        <!-- {{ step === 3 ? navigateTo("/user/register/details") : "" }} -->
-        This step won't show up because it is disabled.
-      </q-step>
-
-      <q-step
-        :name="4"
-        title="Username"
-        icon="add_comment"
-        :done="step > 4"
-        done-color="green"
+      </q-linear-progress>
+    </div>
+    <div class="row">
+      <q-btn
+        color="primary absolute bottom-20"
+        @click="backProgress"
+        :disable="compIndex >= 1 ? false : true"
+        >Back</q-btn
       >
-        <!-- {{ navigateTo("/user/register/username") }} -->
-        Try out different ad text to see what brings in the most customers, and
-        learn how to enhance your ads using features like ad extensions. If you
-        run into any problems with your ads, find out how to tell if they're
-        running and how to resolve approval issues.
-      </q-step>
-      <q-step
-        :name="5"
-        title="Bio"
-        icon="add_comment"
-        caption="(optional)"
-        done-color="green"
-      >
-        <!-- {{ step === 5 ? navigateTo("/user/register/bio") : "" }} -->
-        Try out different ad text to see what brings in the most customers, and
-        learn how to enhance your ads using features like ad extensions. If you
-        run into any problems with your ads, find out how to tell if they're
-        running and how to resolve approval issues.
-      </q-step>
-
-      <template #navigation>
-        <q-stepper-navigation class="row">
-          <q-btn
-            v-if="step > 1"
-            flat
-            color="primary"
-            @click="$refs.stepper.previous()"
-            label="Back"
-            class="q-ml-sm"
-          />
-          <q-space />
-          <q-btn
-            @click="$refs.stepper.next()"
-            color="primary"
-            :label="step === 5 ? 'Finish' : 'Continue'"
-          />
-        </q-stepper-navigation>
-      </template>
-
-      <template #message>
-        <q-banner v-if="step === 1" class="bg-purple-7 text-white">
-          We keep your personal details safe and secure
-        </q-banner>
-        <q-banner v-if="step === 2" class="bg-orange-7 text-white">
-          Enter your OTP
-        </q-banner>
-      </template>
-    </q-stepper>
-    <q-btn @click="$refs.stepper.goTo(5)">Last</q-btn>
+      <q-space />
+      <q-btn
+        color="primary absolute bottom-20 right-2"
+        @click="nextProgress"
+        v-if="compIndex < components.length"
+        :label="step === 5 ? 'Register' : 'Next'"
+      />
+    </div>
   </div>
-  <hr />
+</template>
 
-  
+<script setup lang="ts">
+//* component details
+
+let compIndex = ref<number>(0);
+let components = [
+  resolveComponent("RegisterEmail"),
+  resolveComponent("RegisterOTP"),
+  resolveComponent("RegisterDetails"),
+  resolveComponent("RegisterUserName"),
+  resolveComponent("RegisterBio"),
+];
+const currentComponent = computed(() => {
+  return components[compIndex.value];
+});
+
+//* progress details
+let step = ref<number>(1);
+let progressBars = ref<number[]>([1, 0, 0, 0, 0]);
+
+//* next step button
+const nextProgress = () => {
+  if (
+    step.value < progressBars.value.length &&
+    compIndex.value <= components.length
+  ) {
+    progressBars.value[step.value] = 1;
+    step.value++;
+    compIndex.value++;
+  }
+};
+
+//* back progress button
+const backProgress = () => {
+  if (step.value >= 1 && compIndex.value >= 1) {
+    step.value--;
+    progressBars.value[step.value] = 0;
+    compIndex.value--;
+  }
+};
+</script>
+
+<style scoped>
+.progress-width {
+  width: auto;
+}
+.register-progress {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  .progress-width {
+    width: 16vw;
+  }
+  .register-progress {
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+</style>
+
+<!-- ----------------------------straight line progress---------------------------- -->
+<!-- <template>
+  <div class="main-register flex-1 h-full relative">
+    <div class="register-content flex mb-16">
+      <div class="register-img">
+        <h4>Img</h4>
+      </div>
+      <q-space />
+      <div class="register-form">
+        <component
+          :is="currentComponent"
+          v-if="compIndex < components.length"
+        />
+      </div>
+    </div>
+
+    <div class="register-progress absolute bottom-0">
+      <q-linear-progress
+        :value="progress"
+        size="12px"
+        color="black"
+        rounded
+        class="q-mt-md progress-width mb-8"
+      >
+      </q-linear-progress>
+      <div class="row">
+        <q-btn
+          color="primary"
+          :disable="compIndex === 0 ? true : false"
+          @click="nextAndBack('back')"
+          >Back</q-btn
+        >
+        <q-space />
+        <q-btn
+          v-if="progress === 1"
+          color="primary"
+          @click="nextAndBack('next')"
+          >Register</q-btn
+        >
+        <q-btn v-else color="primary" @click="nextAndBack('next')">Next</q-btn>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-const step = ref(1);
-const router = useRoute();
+useHead({
+  title: "Email",
+});
 
+definePageMeta({
+  middleware: "user-path-check",
+});
+
+//* component details
+const Email = resolveComponent("RegisterEmail");
+const Bio = resolveComponent("RegisterBio");
+const Details = resolveComponent("RegisterDetails");
+const UserName = resolveComponent("RegisterUserName");
+const OTP = resolveComponent("RegisterOTP");
+
+let compIndex = ref(0);
+let components = [Email, OTP, Details, UserName, Bio];
+
+const currentComponent = computed(() => {
+  return components[compIndex.value];
+});
+
+const progress = ref(0.2);
+
+//* next and back button 
+const nextAndBack = (btn) => {
+  if (btn == "next")
+    progress.value < 1 ? ((progress.value += 0.2), compIndex.value++) : "";
+  else if (btn == "back")
+    compIndex.value >= 1 ? ((progress.value -= 0.2), compIndex.value--) : "";
+
+  return progress.value.toFixed();
+};
 </script>
+
+<style scoped>
+.progress-width {
+  width: 95vw;
+}
+@media screen and (max-width: 400px) {
+  .progress-width {
+    width: 85vw;
+  }
+}
+</style> -->
