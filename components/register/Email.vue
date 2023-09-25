@@ -1,9 +1,9 @@
 <script setup>
 useHead({
-  title: "Interwave",
+  title: "Email component",
 });
 </script>
 
 <template>
-  <h4>Interwave</h4>
+  <h4>Email component</h4>
 </template>
