@@ -10,6 +10,6 @@ const test = [
 <template>
   <DynamicStepper test="hello" :comp="test" />
 
-  <Stepper />
+  <!-- <Stepper /> -->
 </template>
 <style scoped></style>

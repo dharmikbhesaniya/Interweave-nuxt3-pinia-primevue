@@ -1,9 +1,9 @@
 <script setup>
 useHead({
-  title: "Details",
+  title: "interweave auth",
 });
 </script>
 
 <template>
-  <h4>Details</h4>
+  <h2>Details</h2>
 </template>

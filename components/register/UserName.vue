@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "UserName",
+  title: "interweave auth",
 });
 </script>
 

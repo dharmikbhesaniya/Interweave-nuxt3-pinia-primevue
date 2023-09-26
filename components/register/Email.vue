@@ -1,9 +1,9 @@
 <script setup>
 useHead({
-  title: "Email component",
+  title: "interweave auth",
 });
 </script>
 
 <template>
-  <h4>Email component</h4>
+  <h2>Email</h2>
 </template>

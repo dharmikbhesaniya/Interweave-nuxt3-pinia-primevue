@@ -1,7 +1,7 @@
 <script setup>
 
 useHead({
-  title: "OTP",
+  title: "interweave auth",
 });
 </script>
 

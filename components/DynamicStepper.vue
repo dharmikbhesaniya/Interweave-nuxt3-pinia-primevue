@@ -33,7 +33,7 @@ for (const val of props.comp) {
   //^ this is not working resolveComponent(val)
 
   components.push(resolveComponent(val));
-  if (components.length == 1) progressBars.value.push(1);
+  if (progressBars.value.length == 0) progressBars.value.push(1);
   else progressBars.value.push(0);
 }
 
