@@ -15,10 +15,11 @@ const props = withDefaults(defineProps<Props>(), {
   test: "hello",
 });
 
-const components: (
-  | string
-  | ConcreteComponent<{}, any, any, ComputedOptions, MethodOptions>
-)[] = [];
+// const components: (
+//   | string
+//   | ConcreteComponent<{}, any, any, ComputedOptions, MethodOptions>
+// )[] = [];
+const components: any = [];
 const compIndex = ref<number>(0);
 const step = ref<number>(1);
 const progressBars = ref<number[]>([]);
@@ -28,9 +29,9 @@ const currentComponent = computed(() => {
 });
 
 for (const val of props.comp) {
-  //!  there are component can't render  
+  //!  there are component can't render
   //^ this is not working resolveComponent(val)
-   
+
   components.push(resolveComponent(val));
   if (components.length == 1) progressBars.value.push(1);
   else progressBars.value.push(0);
