@@ -46,14 +46,12 @@ const backProgress = () => {
 <template>
   <div class="main-register relative h-[95%]">
     <div
-      class="register-content flex overflow-scroll h-[34rem] justify-evenly justify-center lg:items-stretch"
+      class="register-content flex overflow-scroll h-[34rem] justify-evenly justify-center lg:items-stretch lg:mt-8"
     >
-      <div
-        class="imgdiv register-img lg:basis-1/2 self-start mt-20 lg:block hidden"
-      >
+      <div class="register-img lg:basis-1/2 self-start mt-20 lg:block hidden">
         <Image src="/images/login-side.jpg" alt="logo" class="w-[30rem]" />
       </div>
-      <div class="compdiv self-start justify-items-start basis-1/2">
+      <div class="self-start justify-items-start basis-1/2">
         <component
           :is="currentComponent"
           v-if="compIndex < components.length"
