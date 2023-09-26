@@ -1,15 +1,15 @@
-<script setup lang="ts">
-const test = [
-  "RegisterEmail",
-  "RegisterOTP",
-  "RegisterDetails",
-  "RegisterUserName",
-  "RegisterBio",
-];
+<script setup>
+const test = ref([
+  "LazyRegisterEmail",
+  "LazyRegisterOTP",
+  "LazyRegisterDetails",
+  "LazyRegisterUserName",
+  "LazyRegisterBio",
+]);
 </script>
-<template>
-  <DynamicStepper test="hello" :comp="test" />
 
-  <!-- <Stepper /> -->
+<template>
+  <LazyDynamicStepper :comp="test" />
 </template>
+
 <style scoped></style>

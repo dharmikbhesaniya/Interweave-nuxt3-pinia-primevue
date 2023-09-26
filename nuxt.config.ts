@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   quasar: {
     plugins: ["Notify"],
   },
+  components: [
+    {
+      path: "~/components",
+      global: true,
+    },
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},

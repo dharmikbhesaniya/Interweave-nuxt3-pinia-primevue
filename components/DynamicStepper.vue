@@ -1,25 +1,12 @@
 <script setup lang="ts">
-import {
-  ComputedOptions,
-  ConcreteComponent,
-  MethodOptions,
-} from "nuxt/dist/app/compat/capi";
-
 //* component details
 export interface Props {
   comp: string[];
-  test?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  test: "hello",
-});
+const props = withDefaults(defineProps<Props>(), {});
 
-// const components: (
-//   | string
-//   | ConcreteComponent<{}, any, any, ComputedOptions, MethodOptions>
-// )[] = [];
-const components: any = [];
+const components: any[] = [];
 const compIndex = ref<number>(0);
 const step = ref<number>(1);
 const progressBars = ref<number[]>([]);
@@ -29,10 +16,7 @@ const currentComponent = computed(() => {
 });
 
 for (const val of props.comp) {
-  //!  there are component can't render
-  //^ this is not working resolveComponent(val)
-
-  components.push(resolveComponent(val));
+  components.push(val);
   if (progressBars.value.length == 0) progressBars.value.push(1);
   else progressBars.value.push(0);
 }
@@ -59,14 +43,18 @@ const backProgress = () => {
 };
 </script>
 
-<!-- ----------------------------progress line divided into many parts---------------------------- -->
 <template>
   <div class="main-register flex-1 h-full relative">
-    <div class="register-content flex mb-16">
+    <div
+      class="register-content flex mb-16 justify-evenly pt-4 pb-10 items-center overflow-scroll h-[28rem]"
+    >
       <div class="register-img">
-        <h4>Img</h4>
+        <Image
+          src="/images/login-side.jpg"
+          alt="logo"
+          class="w-[30rem] hide-img"
+        />
       </div>
-      <q-space />
       <div class="register-form">
         <component
           :is="currentComponent"
@@ -74,15 +62,14 @@ const backProgress = () => {
         />
       </div>
     </div>
-    {{ progressBars }}<br />{{ components }}
     <div
-      class="register-progress absolute bottom-0 flex flex-row grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
+      class="register-progress absolute bottom-0 grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
     >
       <q-linear-progress
         v-for="(val, index) in progressBars"
         :key="index"
         :value="val"
-        size="5px"
+        size="4px"
         color="deep-purple-6"
         rounded
         class="q-mt-md progress-width mb-8"
@@ -101,7 +88,7 @@ const backProgress = () => {
         color="primary absolute bottom-20 right-2"
         @click="nextProgress"
         v-if="compIndex < components.length"
-        :label="step === 5 ? 'Register' : 'Next'"
+        :label="step === 5 ? 'Register' : 'Save & Continue'"
       />
     </div>
   </div>
@@ -116,14 +103,12 @@ const backProgress = () => {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 400px) {
-  .progress-width {
-    width: 16vw;
-  }
-  .register-progress {
-    width: 85vw;
-    display: flex;
-    justify-content: space-between;
+.register-content::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 865px) {
+  .hide-img {
+    display: none;
   }
 }
 </style>

@@ -15,7 +15,6 @@
   display: flex;
   justify-content: center;
 }
-
 .default-content {
   text-align: center;
   padding: 30px;
