@@ -60,7 +60,6 @@ const backProgress = () => {
 </script>
 
 <!-- ----------------------------progress line divided into many parts---------------------------- -->
-
 <template>
   <div class="main-register flex-1 h-full relative">
     <div class="register-content flex mb-16">
