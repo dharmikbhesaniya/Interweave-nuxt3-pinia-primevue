@@ -16,17 +16,17 @@ const username = ref();
       label="username"
       type="text"
       outlined
-      class="mt-3 inpu-width"
+      class="mt-3 input-width"
     />
   </div>
 </template>
 
 <style scoped>
-.inpu-width {
+.input-width {
   width: 350px;
 }
 @media screen and (max-width: 865px) {
-  .inpu-width {
+  .input-width {
     width: 250px;
   }
 }

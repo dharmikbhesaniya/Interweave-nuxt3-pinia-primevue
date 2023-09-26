@@ -7,7 +7,7 @@ const email = ref<string>("");
 </script>
 
 <template>
-   <div
+  <div
     class="grid grid-cols-1 justify-items-center content-start min-h-[30rem] max-h-[50rem]"
   >
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
@@ -16,17 +16,17 @@ const email = ref<string>("");
       label="email"
       type="text"
       outlined
-      class="mt-3 inpu-width"
+      class="mt-3 input-width"
     />
   </div>
 </template>
 
 <style scoped>
-.inpu-width {
+.input-width {
   width: 350px;
 }
 @media screen and (max-width: 865px) {
-  .inpu-width {
+  .input-width {
     width: 250px;
   }
 }

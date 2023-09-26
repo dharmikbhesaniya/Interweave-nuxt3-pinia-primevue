@@ -12,17 +12,23 @@ const bio = ref();
   >
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
     <div class="q-pa-md" style="max-width: 500px; min-width: 350px">
-      <q-input v-model="bio" outlined filled autogrow />
+      <q-input
+        v-model="bio"
+        outlined
+        filled
+        autogrow
+        class="mt-3 input-width"
+      />
     </div>
   </div>
 </template>
 
 <style scoped>
-.inpu-width {
+.input-width {
   width: 350px;
 }
 @media screen and (max-width: 865px) {
-  .inpu-width {
+  .input-width {
     width: 250px;
   }
 }
