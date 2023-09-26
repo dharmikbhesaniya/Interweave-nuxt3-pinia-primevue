@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body::-webkit-scrollbar{
-    display: none;
+body {
+  background-color: rgba(245, 245, 245, 0.811);
+}
+body::-webkit-scrollbar {
+  display: none;
 }
