@@ -2,6 +2,9 @@
 useHead({
   title: "Interwave",
 });
+definePageMeta({
+  middleware: "user-auth",
+});
 </script>
 
 <template>

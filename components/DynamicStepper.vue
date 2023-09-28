@@ -44,14 +44,14 @@ const backProgress = () => {
 </script>
 
 <template>
-  <div class="main-register relative h-[95%]">
+  <div class="main-register relative">
     <div
-      class="register-content flex overflow-scroll h-[34rem] justify-evenly justify-center lg:items-stretch lg:mt-8"
+      class="register-content justify-evenly flex mb-16 pb-10 items-stretch overflow-scroll h-[34rem]"
     >
-      <div class="register-img lg:basis-1/2 self-start mt-20 lg:block hidden">
+      <div class="register-img lg:basis-1/2 self-center mt-20 lg:block hidden">
         <Image src="/images/login-side.jpg" alt="logo" class="w-[30rem]" />
       </div>
-      <div class="self-start justify-items-start basis-1/2">
+      <div class="self-center justify-items-center basis-1/2 mt-10">
         <component
           :is="currentComponent"
           v-if="compIndex < components.length"
@@ -59,7 +59,7 @@ const backProgress = () => {
       </div>
     </div>
     <div
-      class="register-progress w-full flex justify-between absolute bottom-0 grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
+      class="register-progress flex justify-between w-full absolute bottom-2 grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
     >
       <q-linear-progress
         v-for="(val, index) in progressBars"
@@ -68,47 +68,33 @@ const backProgress = () => {
         size="4px"
         color="deep-purple-6"
         rounded
-        class="q-mt-md progress-width mb-0"
+        class="q-mt-md w-auto mb-0"
       >
       </q-linear-progress>
     </div>
     <div class="row">
       <q-btn
-        color="primary absolute bottom-4"
+        color="primary"
         @click="backProgress"
+        class="absolute bottom-12 font-bold tracking-wide"
+        flat
         :disable="compIndex >= 1 ? false : true"
         >Back</q-btn
       >
       <q-space />
       <q-btn
-        color="primary absolute bottom-4 right-2"
+        color="primary absolute bottom-12 right-2"
         @click="nextProgress"
         v-if="compIndex < components.length"
-        :label="step === 5 ? 'Register' : 'Save & Continue'"
+        :label="step === 5 ? 'Register' : step === 1 ? 'Send Otp' : 'Next'"
       />
     </div>
   </div>
 </template>
 
 <style scoped>
-.progress-width {
-  width: auto;
-}
-
-/* .register-progress {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* .register-content {
-  justify-content: space-evenly;
-} */
 
 .register-content::-webkit-scrollbar {
   display: none;
-}
-
-@media screen and (max-width: 1024px) {
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "interweave auth",
+  title: "Username",
 });
 
 const username = ref();
@@ -8,12 +8,12 @@ const username = ref();
 
 <template>
   <div
-    class="grid grid-cols-1 justify-items-center content-start min-h-[30rem] max-h-[50rem]"
+    class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[50rem]"
   >
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
     <q-input
       v-model="username"
-      label="username"
+      label="Username"
       type="text"
       outlined
       class="mt-3 input-width"
@@ -25,9 +25,9 @@ const username = ref();
 .input-width {
   width: 350px;
 }
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 1024px) {
   .input-width {
-    width: 250px;
+    width: 280px;
   }
 }
 </style>

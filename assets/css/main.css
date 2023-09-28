@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgba(245, 245, 245, 0.811);
+  /* background-color: rgba(245, 245, 245, 0.811); */
 }
 body::-webkit-scrollbar {
   display: none;
