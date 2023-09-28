@@ -16,5 +16,11 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@pinia/nuxt", "nuxt-quasar-ui"],
+  modules: ["@pinia/nuxt", "nuxt-quasar-ui", "nuxt-gtag"],
+  gtag: {
+    id: process.env.GOOGLEID,
+    config: {
+      page_title: "Interwave",
+    },
+  },
 });
