@@ -5,9 +5,8 @@ useHead({
 
 const mobile = ref();
 const name = ref();
-const gender = ref();
 const password = ref();
-const DOB = ref();
+
 </script>
 
 <template>
@@ -21,20 +20,6 @@ const DOB = ref();
       outlined
       label="Name"
       type="text"
-      class="mt-3 input-width"
-    />
-    <q-input
-      v-model="gender"
-      outlined
-      label="Gender"
-      type="text"
-      class="mt-3 input-width"
-    />
-    <q-input
-      v-model="DOB"
-      outlined
-      label="Date of birth"
-      type="calender"
       class="mt-3 input-width"
     />
     <q-input
