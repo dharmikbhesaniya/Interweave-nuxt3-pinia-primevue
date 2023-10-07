@@ -11,13 +11,15 @@ const email = ref<string>("");
     class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[50rem]"
   >
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
-    <q-input
-      v-model="email"
-      label="Email"
-      type="text"
-      outlined
-      class="mt-3 input-width"
-    />
+    <div class="relative">
+      <q-input
+        v-model="email"
+        label="Email"
+        type="text"
+        outlined
+        class="mt-3 input-width"
+      />
+    </div>
     <div
       class="text-subtitle1 mt-4 flex justify-start w-[17.6rem] lg:w-[22.1rem]"
     >

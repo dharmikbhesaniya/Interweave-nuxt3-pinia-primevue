@@ -23,4 +23,13 @@ export default defineNuxtConfig({
       page_title: "Interwave",
     },
   },
+  runtimeConfig: {
+    public: {
+      gtm_id: process.env.gtm_id,
+      gtm_enabled: true,
+      gtm_debug: false,
+      sitename: "Interwave - social media app",
+      companyname: "Interwave"
+    },
+  },
 });
