@@ -10,14 +10,14 @@ useHead({
 
 <template>
   <div class="flex">
-    <SidebarMobileMenu />
-    <SidebarLaptopMenu />
+    <SidebarMobileMenu class="block md:hidden" />
+    <SidebarLaptopMenu class="hidden md:block" />
+    <!-- set post layout here  -->
+    <!-- PostsMain teg only in layout -->
     <div class="mt-9 w-[55rem] m-auto post">
-      <PostsMain />
-      <PostsMain />
-      <PostsMain />
-      <PostsMain />
+      <PostsMain v-for="i in 5" />
     </div>
+    <!-- end post layout here  -->
   </div>
 </template>
 

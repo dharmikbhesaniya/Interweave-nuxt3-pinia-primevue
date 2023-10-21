@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         {
           src: "https://kit.fontawesome.com/2ba0febf51.js",
         },
-        { body: true },
+        // { body: true },
       ],
     },
   },
