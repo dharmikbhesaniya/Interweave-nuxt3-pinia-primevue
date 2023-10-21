@@ -36,17 +36,15 @@ const password = ref();
           outlined
           class="mt-3 input-width"
         />
-        <div class="">
-          <q-btn flat color="primary font-bold" class="text-subtitle2"
-            >forget password ?</q-btn
-          >
+        <div class="mr-[192px] mt-2">
+          <q-btn flat color="primary font-bold" class="lg:text-subtitle1"
+            >forget password ?
+          </q-btn>
         </div>
         <div class="mt-4 flex justify-between w-[17.7rem] lg:w-[22.1rem]">
           <q-btn color="primary font-bold px-6 py-2 input-width">Login</q-btn>
         </div>
-        <div
-          class="text-subtitle2 mt-4 flex justify-center w-[17.6rem] lg:w-[22.1rem]"
-        >
+        <div class="text-subtitle2 mt-4 flex justify-center w-[17.6rem] lg:w-[22.1rem]">
           don't have an account ?
           <NuxtLink
             class="text-blue-500 font-bold no-underline text-subtitle1"

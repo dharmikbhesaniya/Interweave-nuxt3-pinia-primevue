@@ -1,5 +1,5 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   if (!isLoggedIn) {
     if (to.path === "/auth/register") return true;
     else {
