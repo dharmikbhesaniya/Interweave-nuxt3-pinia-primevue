@@ -1,5 +1,5 @@
 <template>
-  <div class="main-menu w-[15rem] p-8 font-bold">
+  <div class="main-menu w-[15rem] p-8 font-semibold">
     <div class="menu">
       <p class="text-3xl">Interactify</p>
     </div>
@@ -34,9 +34,10 @@
   width: 8rem;
   margin: 18px 0px;
   cursor: pointer;
+  margin-right: auto;
 }
 .menu p {
-  font-size: 18px;
+  font-size: 16px;
 }
 .menu i {
   font-size: 22px;

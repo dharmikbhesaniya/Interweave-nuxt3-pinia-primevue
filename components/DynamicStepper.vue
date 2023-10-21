@@ -23,10 +23,7 @@ for (const val of props.comp) {
 
 //* next step button
 const nextProgress = () => {
-  if (
-    step.value < progressBars.value.length &&
-    compIndex.value <= components.length
-  ) {
+  if (step.value < progressBars.value.length && compIndex.value <= components.length) {
     progressBars.value[step.value] = 1;
     step.value++;
     compIndex.value++;
@@ -52,10 +49,7 @@ const backProgress = () => {
         <Image src="/images/login-side.jpg" alt="logo" class="w-[30rem]" />
       </div>
       <div class="self-center justify-items-center basis-1/2 mt-10">
-        <component
-          :is="currentComponent"
-          v-if="compIndex < components.length"
-        />
+        <component :is="currentComponent" v-if="compIndex < components.length" />
       </div>
     </div>
     <div
@@ -66,7 +60,7 @@ const backProgress = () => {
         :key="index"
         :value="val"
         size="4px"
-        color="deep-purple-6"
+        color="blue-6"
         rounded
         class="q-mt-md w-auto mb-0"
       >
@@ -93,7 +87,6 @@ const backProgress = () => {
 </template>
 
 <style scoped>
-
 .register-content::-webkit-scrollbar {
   display: none;
 }
