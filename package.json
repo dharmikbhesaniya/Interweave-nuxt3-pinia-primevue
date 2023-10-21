@@ -22,14 +22,17 @@
     "@types/node": "^20.6.3",
     "autoprefixer": "^10.4.15",
     "nuxt": "^3.7.3",
+    "nuxt-gtag": "^1.1.1",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
+    "@gtm-support/vue-gtm": "^2.2.0",
     "@pinia/nuxt": "^0.4.11",
     "axios": "^1.5.0",
     "nuxt-quasar-ui": "^2.0.5",
     "pinia": "^2.1.6",
-    "quasar": "^2.12.7"
+    "quasar": "^2.12.7",
+    "vue3-otp-input": "^0.4.1"
   }
 }

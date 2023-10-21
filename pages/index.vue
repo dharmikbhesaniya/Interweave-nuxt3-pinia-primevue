@@ -1,9 +1,21 @@
 <script setup>
+definePageMeta({
+  middleware: "user-auth",
+});
+
 useHead({
-  title: "Interwave",
+  title: "Interactify",
 });
 </script>
 
 <template>
-  <h4>Interwave</h4>
+  <div class="flex">
+    <div>
+      <SidebarMobileMenu class="block lg:hidden" />
+      <SidebarLaptopMenu class="hidden lg:block" />
+    </div>
+    <NuxtLayout name="post" class="h-screen">
+      <PostsMain v-for="i in 5" />
+    </NuxtLayout>
+  </div>
 </template>
