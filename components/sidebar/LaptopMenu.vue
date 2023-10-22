@@ -1,5 +1,5 @@
 <template>
-  <div class="main-menu w-[15rem] p-8 font-semibold">
+  <div class="main-menu w-auto p-8 font-semibold">
     <div class="menu">
       <p class="text-3xl">Interactify</p>
     </div>
@@ -31,10 +31,14 @@
 <style scoped>
 .menu {
   display: flex;
-  width: 8rem;
-  margin: 18px 0px;
   cursor: pointer;
   margin-right: auto;
+  padding: 12px;
+}
+.menu:hover {
+  background-color: rgb(231, 229, 229);
+  transition: 0.4s;
+  border-radius: 10px;
 }
 .menu p {
   font-size: 16px;

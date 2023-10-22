@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:w-[30rem] w-[21rem] lg:p-8 mb-6 ml-2 bg-white">
+  <div class="lg:w-[30rem] w-full max-w-lg lg:p-8 p-4 mb-6 bg-white">
     <PostsHeader />
     <PostsPostImage />
     <PostsFooter />

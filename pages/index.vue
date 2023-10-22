@@ -15,7 +15,7 @@ useHead({
       <SidebarLaptopMenu class="hidden lg:block" />
     </div>
     <NuxtLayout name="post" class="h-screen">
-      <PostsMain v-for="i in 5" />
+      <PostsMain v-for="i in 4" />
     </NuxtLayout>
   </div>
 </template>

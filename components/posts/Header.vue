@@ -10,10 +10,10 @@
     <div class="post-profile-username ml-3 text-subtitle1 font-semibold">
       <p>ankit_patel_07</p>
     </div>
-    <div class="ml-auto">
+    <div class="ml-auto mr-2">
       <i class="fa-solid fa-ellipsis-vertical fa-2xl cursor-pointer"></i>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup></script> 
