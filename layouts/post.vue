@@ -1,5 +1,6 @@
 <template>
-  <div class="post justify-items-center grid lg:pt-9 lg:max-w-5xl">
+  <div class="flex items-center justify-center bg-gray-50 pt-20 h-screen">
+  <!-- <div class="post justify-items-center grid lg:pt-9 lg:max-w-5xl"> -->
     <slot />
   </div>
 </template>

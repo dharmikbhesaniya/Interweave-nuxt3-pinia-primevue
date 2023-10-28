@@ -7,13 +7,13 @@
         <i class="fa-solid fa-house fa-xl"></i>
       </div>
       <div class="menu">
-        <i class="fa-solid fa-search fa-xl"></i>
+        <q-icon name="explore" size="sm" />
       </div>
       <div class="menu">
         <i class="fa-solid fa-plus fa-xl"></i>
       </div>
       <div class="menu">
-        <i class="fa-solid fa-message fa-xl"></i>
+        <i class="fa-solid fa-comment fa-xl"></i>
       </div>
       <div class="menu">
         <i class="fa-solid fa-user fa-xl"></i>

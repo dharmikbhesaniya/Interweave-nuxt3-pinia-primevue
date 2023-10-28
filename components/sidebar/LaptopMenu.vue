@@ -1,11 +1,12 @@
 <template>
-  <div class="main-menu w-auto p-8 font-semibold">
-    <div class="menu">
-      <p class="text-3xl">Interactify</p>
-    </div>
-    <div class="menu">
+  <div class="main-menu w-60 p-8 h-[40.1rem] font-semibold sticky left-0">
+    <div class="menu mt-20">
       <i class="fa-solid fa-house"></i>
       <p>Home</p>
+    </div>
+    <div class="menu">
+      <q-icon name="explore" size="sm" />
+      <p>Explore</p>
     </div>
     <div class="menu">
       <i class="fa-solid fa-search"></i>
@@ -16,7 +17,7 @@
       <p>Create</p>
     </div>
     <div class="menu">
-      <i class="fa-solid fa-message"></i>
+      <i class="fa-solid fa-comment"></i>
       <p>Messages</p>
     </div>
     <div class="menu">
@@ -32,8 +33,8 @@
 .menu {
   display: flex;
   cursor: pointer;
-  margin-right: auto;
-  padding: 12px;
+  margin: 25px 0;
+  padding: 12px 10px;
 }
 .menu:hover {
   background-color: rgb(231, 229, 229);
@@ -49,6 +50,5 @@
 }
 .main-menu {
   border-right: 1px solid gray;
-  height: 100vh;
 }
 </style>

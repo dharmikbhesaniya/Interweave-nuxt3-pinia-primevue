@@ -1,8 +1,12 @@
 <template>
-  <div class="lg:w-[30rem] w-full max-w-lg lg:p-8 p-4 mb-6 bg-white">
-    <PostsHeader />
-    <PostsPostImage />
-    <PostsFooter />
+  <div
+    class="sm:w-[32rem] w-[22rem] overflow-auto flex max-w-screen-md"
+  >
+    <div class="sm:px-5 px-2 bg-white shadow-md sm:m-2 my-2 rounded-lg">
+      <PostsHeader />
+      <PostsPostImage />
+      <PostsFooter />
+    </div>
   </div>
 </template>
 

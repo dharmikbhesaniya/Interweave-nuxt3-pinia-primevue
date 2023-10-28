@@ -17,7 +17,6 @@
 }
 .default-content {
   text-align: center;
-  /* padding: 30px; */
   overflow: scroll;
   width: 1400px;
 }
