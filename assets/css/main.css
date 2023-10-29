@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +5,9 @@
 }
 body {
   /* background-color: rgba(245, 245, 245, 0.811); */
+  background-color: #f6f9fb;
+  font-family: twitterchirp, -apple-system, blinkmacsystemfont, segoe ui, roboto,
+    helvetica, arial, sans-serif, -apple-system;
 }
 body::-webkit-scrollbar {
   display: none;

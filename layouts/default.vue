@@ -4,7 +4,7 @@
       <div>
         <Navbar />
       </div>
-      <div class="flex items-start justify-center bg-body">
+      <div class="flex items-start justify-center">
         <div class="md:w-[20%]">
           <div class="bg-white">
             <SidebarLaptopMenu class="hidden lg:block" />
@@ -33,11 +33,6 @@
   display: flex;
   justify-content: center;
 }
-
-.bg-body {
-  background-color: #f6f9fb;
-}
-
 .default-content {
   text-align: center;
   overflow: scroll;
