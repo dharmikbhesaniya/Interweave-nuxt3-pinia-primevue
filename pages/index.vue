@@ -4,18 +4,21 @@ definePageMeta({
 });
 
 useHead({
-  title: "Interactify",
+  title: "Intractify",
 });
 </script>
 
 <template>
-  <div class="flex">
-    <div>
-      <SidebarMobileMenu class="block lg:hidden" />
-      <SidebarLaptopMenu class="hidden lg:block" />
-    </div>
-    <NuxtLayout name="post" class="h-screen">
-      <PostsMain v-for="i in 5" />
-    </NuxtLayout>
+  <div class="h-[34rem] posts overflow-auto mt-20">
+    <PostsMain v-for="i in 4" />
+  </div>
+  <div class="h-[34rem] posts overflow-auto mt-[6rem] lg:block hidden">
+    <FollowRequest />
   </div>
 </template>
+
+<style scoped>
+.posts::-webkit-scrollbar {
+  display: none;
+}
+</style>

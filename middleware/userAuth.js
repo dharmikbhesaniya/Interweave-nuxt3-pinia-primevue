@@ -4,7 +4,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   // const { token, checkToken } = useTokenStore();
   // checkToken();
   // console.log(token);
-  const token = 0;
+  const token = 1;
 
   if (!token) {
     if (to.path === "/auth/login" || to.path === "/auth/register") return true;
