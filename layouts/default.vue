@@ -12,7 +12,7 @@
           <div class="w-screen">
             <SidebarMobileMenu class="block md:hidden" />
           </div>
-          <div class="bg-white w-[7rem]">
+          <div class="bg-white w-[6rem]">
             <SidebarTabletMenu class="md:block lg:hidden hidden" />
           </div>
         </div>

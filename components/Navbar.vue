@@ -25,8 +25,9 @@
             </svg>
             <input
               type="search"
-              class="outline-none input border border-gray-300 md:w-[28rem] sm:w-[20rem] w-[10rem] rounded-3xl"
-              placeholder="        Search"
+              class="outline-none input border border-gray-300 md:w-[28rem] sm:w-[20rem]
+              w-[10rem] rounded-3xl pl-12"
+              placeholder="Search"
               name="search"
               id="search"
             />

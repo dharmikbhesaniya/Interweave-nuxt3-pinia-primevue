@@ -1,5 +1,5 @@
 <template>
-  <div class="main-menu p-8 h-[40.1rem] font-semibold sticky left-0">
+  <div class="main-menu pt-7 h-[40.1rem] font-semibold sticky left-0">
     <div class="menu mt-14">
       <i class="fa-solid fa-house"></i>
     </div>
@@ -16,10 +16,10 @@
       <i class="fa-solid fa-film"></i>
     </div>
     <div class="menu">
-      <i class="fa-regular fa-bell"></i>
+      <i class="fa-regular fa-comment"></i>
     </div>
     <div class="menu">
-      <i class="fa-regular fa-comment"></i>
+      <i class="fa-solid fa-gear"></i>
     </div>
   </div>
 </template>
@@ -28,10 +28,9 @@
 
 <style scoped>
 .menu {
-  display: flex;
   cursor: pointer;
   margin: 30px 0;
-  padding: 12px 10px;
+  padding: 12px 0px;
 }
 .menu:hover {
   background-color: rgb(231, 229, 229);
@@ -43,7 +42,6 @@
 }
 .menu i {
   font-size: 22px;
-  margin-right: 20px;
 }
 .main-menu {
   border-right: 1px solid rgb(233, 230, 230);

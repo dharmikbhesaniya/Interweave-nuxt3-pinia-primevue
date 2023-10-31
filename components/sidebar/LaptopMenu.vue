@@ -65,16 +65,16 @@
         <p>Reels</p>
       </div>
     </NuxtLink>
-    <NuxtLink to="/notification" class="no-underline text-black">
-      <div class="menu">
-        <i class="fa-regular fa-bell"></i>
-        <p>Notifications</p>
-      </div>
-    </NuxtLink>
     <NuxtLink to="/messages" class="no-underline text-black">
       <div class="menu">
         <i class="fa-regular fa-comment"></i>
         <p>Messages</p>
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/notification" class="no-underline text-black">
+      <div class="menu">
+        <i class="fa-solid fa-gear"></i>
+        <p>Settings</p>
       </div>
     </NuxtLink>
   </div>
@@ -87,7 +87,7 @@
   display: flex;
   cursor: pointer;
   margin: 10px 0;
-  padding: 20px 10px;
+  padding: 22px 10px;
   padding-bottom: 0;
 }
 .menu:hover {
