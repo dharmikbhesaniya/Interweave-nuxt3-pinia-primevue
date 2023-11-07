@@ -9,7 +9,7 @@
         />
         <div class="flex flex-col">
           <h2 class="lg:text-lg text-sm font-semibold">abhi_patel_24</h2>
-          <h2 class="lg:text-sm text-xs text-left font-semibold text-gray-500">
+          <h2 class="text-xs text-left font-semibold text-gray-500">
             18, Nov 2023
           </h2>
         </div>

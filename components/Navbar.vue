@@ -7,7 +7,7 @@
             Intractify
           </h2>
         </NuxtLink>
-        <div class="md:ml-40 ml-10">
+        <div class="md:ml-30 lg:ml-48 ml-10">
           <div class="relative -mx-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +25,21 @@
             </svg>
             <input
               type="search"
-              class="outline-none input border border-gray-300 md:w-[28rem] sm:w-[20rem]
-              w-[10rem] rounded-3xl pl-12"
+              class="outline-none 
+              input border border-gray-300 lg:w-[20rem] md:w-[15rem] sm:w-[15rem] w-[10rem] rounded-3xl pl-12"
               placeholder="Search"
               name="search"
               id="search"
             />
           </div>
+        </div>
+        <div class="md:flex items-center ml-12 text-lg mt-3 hidden">
+          <NuxtLink to="/notification" class="no-underline text-black">
+            <p>Notification</p>
+          </NuxtLink>
+          <NuxtLink to="/notification" class="no-underline text-black ml-10">
+            <p>Blog</p>
+          </NuxtLink>
         </div>
         <div class="menu ml-auto cursor-pointer">
           <Image

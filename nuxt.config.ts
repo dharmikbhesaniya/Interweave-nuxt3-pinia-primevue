@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      gtm_id: process.env.gtm_id,
+      gtm_id: process.env.GTM_ID,
       gtm_enabled: true,
       gtm_debug: false,
       sitename: "Intractify - social media app",
@@ -38,7 +38,6 @@ export default defineNuxtConfig({
         {
           src: "https://kit.fontawesome.com/2ba0febf51.js",
         },
-        // { body: true },
       ],
     },
   },

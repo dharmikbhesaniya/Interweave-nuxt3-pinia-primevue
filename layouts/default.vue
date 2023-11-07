@@ -1,10 +1,10 @@
 <template>
   <div class="default-layout">
     <div class="default-content">
-      <div>
+      <div v-if="token">
         <Navbar />
       </div>
-      <div class="flex items-start justify-center">
+      <div class="flex items-start justify-center" v-if="token">
         <div class="md:w-[20%]">
           <div class="bg-white">
             <SidebarLaptopMenu class="hidden lg:block" />
@@ -20,11 +20,14 @@
           <slot />
         </div>
       </div>
+      <slot v-if="!token" />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+let token = true;
+</script>
 
 <style scoped>
 .default-layout {
