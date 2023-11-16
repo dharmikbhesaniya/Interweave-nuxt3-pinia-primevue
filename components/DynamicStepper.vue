@@ -53,7 +53,7 @@ const backProgress = () => {
       </div>
     </div>
     <div
-      class="register-progress flex justify-between w-full absolute bottom-2 grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
+      class="register-progress justify-between w-full absolute bottom-2 grid grid-flow-row-dense grid-cols-5 grid-rows-1 gap-x-2.5"
     >
       <q-linear-progress
         v-for="(val, index) in progressBars"

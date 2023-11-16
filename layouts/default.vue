@@ -1,10 +1,10 @@
 <template>
   <div class="default-layout">
     <div class="default-content">
-      <div>
+      <div v-if="token">
         <Navbar />
       </div>
-      <div class="flex items-start justify-center bg-body">
+      <div class="flex items-start justify-center" v-if="token">
         <div class="md:w-[20%]">
           <div class="bg-white">
             <SidebarLaptopMenu class="hidden lg:block" />
@@ -12,7 +12,7 @@
           <div class="w-screen">
             <SidebarMobileMenu class="block md:hidden" />
           </div>
-          <div class="bg-white w-[7rem]">
+          <div class="bg-white w-[6rem]">
             <SidebarTabletMenu class="md:block lg:hidden hidden" />
           </div>
         </div>
@@ -20,11 +20,14 @@
           <slot />
         </div>
       </div>
+      <slot v-if="!token" />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+let token = true;
+</script>
 
 <style scoped>
 .default-layout {
@@ -33,11 +36,6 @@
   display: flex;
   justify-content: center;
 }
-
-.bg-body {
-  background-color: #f6f9fb;
-}
-
 .default-content {
   text-align: center;
   overflow: scroll;

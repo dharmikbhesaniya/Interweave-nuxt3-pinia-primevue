@@ -1,9 +1,9 @@
 {
-  "name": "interweave",
+  "name": "Intractify",
   "version": "0.0.1",
-  "description": "interweave social media web application",
-  "productName": "interweave",
-  "author": "dharmikbhesaniya <dharmikbhesaniya@gmail.com>",
+  "description": "Intractify social media web application",
+  "productName": "Intractify",
+  "author": "dharmikbhesaniya <dsbhesaniya4811@gmail.com>,   abhipatel",
   "private": true,
   "type": "module",
   "overrides": {
