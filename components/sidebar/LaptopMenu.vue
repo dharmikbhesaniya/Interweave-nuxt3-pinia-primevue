@@ -1,5 +1,5 @@
 <template>
-  <div class="main-menu p-8 h-[36.7rem] sticky left-0 mt-14">
+  <div class="p-8 sticky left-0">
     <template v-for="data in menu">
       <NuxtLink :to="data.path" class="no-underline">
         <div class="menu flex items-center">
@@ -23,29 +23,3 @@
 <script setup>
 import { menu } from "../../src/jsonData/sidebar";
 </script>
-
-<style scoped>
-.menu {
-  cursor: pointer;
-  margin: 17px 0;
-  padding: 10px;
-}
-.menu:hover {
-  background-color: rgb(231, 229, 229);
-  transition: 0.4s;
-  border-radius: 10px;
-}
-.menu p {
-  font-size: 16px;
-}
-.menu i {
-  font-size: 22px;
-  margin-right: 20px;
-}
-.main-menu {
-  border-right: 1px solid rgb(233, 230, 230);
-}
-.router-link-active {
-  font-weight: bold;
-}
-</style>

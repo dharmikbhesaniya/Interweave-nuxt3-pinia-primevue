@@ -6,14 +6,3 @@
     </NuxtLink>
   </div>
 </template>
-
-<style scoped>
-.error-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-</style>

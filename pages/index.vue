@@ -9,10 +9,10 @@ useHead({
 </script>
 
 <template>
-  <div class="h-[34rem] posts overflow-auto mt-20">
+  <div class="h-[89vh] 2xl:h-screen posts overflow-auto">
     <PostsMain v-for="i in 4" />
   </div>
-  <div class="h-[34rem] posts overflow-auto mt-[6rem] lg:block hidden">
+  <div class="posts overflow-auto xl:block hidden mt-2">
     <FollowRequest />
   </div>
 </template>

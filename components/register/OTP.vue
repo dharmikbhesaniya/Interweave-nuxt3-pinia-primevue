@@ -14,39 +14,16 @@ const handleOnComplete = (value: number) => {
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[50rem]"
-  >
+  <div class="auth-inputs">
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
     <v-otp-input
       ref="otpInput"
       v-model="otp"
-      input-classes="otp-input mt-4 w-12 h-12 mx-3 text-xl rounded text-center"
+      input-classes="auth-otp-input"
       separator=" "
-      :num-inputs="6"
+      :num-inputs="4"
       :should-auto-focus="true"
       @on-complete="handleOnComplete"
     />
   </div>
 </template>
-
-<style>
-.input-width {
-  width: 350px;
-}
-@media screen and (max-width: 1024px) {
-  .input-width {
-    width: 280px;
-  }
-}
-.otp-input {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-.otp-input.is-complete {
-  background-color: #f5f4f4;
-}
-</style>

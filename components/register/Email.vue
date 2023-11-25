@@ -7,9 +7,7 @@ const email = ref<string>("");
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[50rem]"
-  >
+  <div class="auth-inputs">
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
     <div class="relative">
       <q-input
@@ -17,27 +15,16 @@ const email = ref<string>("");
         label="Email"
         type="text"
         outlined
-        class="mt-3 input-width"
+        class="mt-3 auth-input"
       />
     </div>
-    <div
-      class="text-subtitle1 mt-4 flex justify-start w-[17.6rem] lg:w-[22.1rem]"
-    >
+    <div class="text-[16px] mt-4 flex justify-start auth-input">
       Already have an account ?
-      <NuxtLink class="text-blue-500 font-bold no-underline" href="/auth/login"
+      <NuxtLink class="text-blue-700 font-semibold no-underline" href="/auth/login"
         >&nbsp;Login</NuxtLink
       >
     </div>
   </div>
 </template>
 
-<style scoped>
-.input-width {
-  width: 350px;
-}
-@media screen and (max-width: 1024px) {
-  .input-width {
-    width: 280px;
-  }
-}
-</style>
+<script setup></script>

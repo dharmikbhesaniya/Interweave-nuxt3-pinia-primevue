@@ -4,6 +4,7 @@ useHead({
 });
 definePageMeta({
   middleware: "user-auth",
+  layout: "auth",
 });
 
 const email = ref();
@@ -11,43 +12,39 @@ const password = ref();
 </script>
 
 <template>
-  <div
-    class="register-content justify-evenly flex mb-16 pb-10 items-stretch overflow-scroll h-[34rem]"
-  >
-    <div class="register-img lg:basis-1/2 self-center mt-20 lg:block hidden">
+  <div class="auth-content">
+    <div class="auth-img">
       <Image src="/images/login-side.jpg" alt="logo" class="w-[30rem]" />
     </div>
-    <div class="self-center justify-items-center basis-1/2 mt-10">
-      <div
-        class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[48rem]"
-      >
+    <div class="auth-components">
+      <div class="auth-inputs">
         <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
         <q-input
           v-model="email"
           label="Email"
           type="text"
           outlined
-          class="mt-3 input-width"
+          class="mt-3 auth-input"
         />
         <q-input
           v-model="password"
           label="Password"
           type="password"
           outlined
-          class="mt-3 input-width"
+          class="mt-3 auth-input"
         />
-        <div class="mr-[192px] mt-2">
+        <div class="mt-2 text-left auth-input">
           <q-btn flat color="primary font-bold" class="lg:text-subtitle1"
             >forget password ?
           </q-btn>
         </div>
-        <div class="mt-4 flex justify-between w-[17.7rem] lg:w-[22.1rem]">
-          <q-btn color="primary font-bold px-6 py-2 input-width">Login</q-btn>
+        <div class="mt-4 flex justify-between auth-input">
+          <q-btn color="primary font-semibold px-6 py-2 auth-input">Login</q-btn>
         </div>
-        <div class="text-subtitle2 mt-4 flex justify-center w-[17.6rem] lg:w-[22.1rem]">
+        <div class="auth-input text-[16px] mt-4 flex justify-center">
           don't have an account ?
           <NuxtLink
-            class="text-blue-500 font-bold no-underline text-subtitle1"
+            class="text-blue-700 font-semibold no-underline"
             href="/auth/register"
           >
             &nbsp;Register</NuxtLink
@@ -57,17 +54,3 @@ const password = ref();
     </div>
   </div>
 </template>
-
-<style scoped>
-.input-width {
-  width: 350px;
-}
-@media screen and (max-width: 1024px) {
-  .input-width {
-    width: 280px;
-  }
-}
-.register-content::-webkit-scrollbar {
-  display: none;
-}
-</style>

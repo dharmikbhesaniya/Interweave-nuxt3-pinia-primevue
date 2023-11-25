@@ -15,23 +15,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ["~/assets/css/main.css", "~/assets/css/tailwind.style.css"],
-  modules: ["@pinia/nuxt", "nuxt-quasar-ui", "nuxt-gtag"],
-  gtag: {
-    id: process.env.GOOGLEID,
-    config: {
-      page_title: "Intractify",
-    },
-  },
-  runtimeConfig: {
-    public: {
-      gtm_id: process.env.GTM_ID,
-      gtm_enabled: true,
-      gtm_debug: false,
-      sitename: "Intractify - social media app",
-      companyname: "Intractify",
-    },
-  },
+  css: [
+    "~/assets/css/main.css",
+    "~/assets/css/tailwind.style.css",
+    "~/assets/css/globals.css",
+  ],
+  modules: ["@pinia/nuxt", "nuxt-quasar-ui"],
   app: {
     head: {
       script: [

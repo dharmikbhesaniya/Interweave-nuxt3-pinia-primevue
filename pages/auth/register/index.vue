@@ -13,6 +13,7 @@ useHead({
 
 definePageMeta({
   middleware: "user-auth",
+  layout: "auth",
 });
 </script>
 
@@ -21,4 +22,3 @@ definePageMeta({
 </template>
 
 <style scoped></style>
- 

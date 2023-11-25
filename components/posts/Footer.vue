@@ -9,19 +9,19 @@
     </div>
     <hr class="border border-gray-50" />
     <div class="flex md:text-2xl text-lg text-gray-600">
-      <div class="flex cursor-pointer pt-3 px-2 my-1.5 mx-2 rounded-md hover:bg-gray-200">
+      <div class="post-footer">
         <i class="fa-regular fa-thumbs-up pr-2"></i>
         <p class="md:text-sm text-xs">Like</p>
       </div>
-      <div class="flex cursor-pointer pt-3 px-2 my-1.5 mx-2 rounded-md hover:bg-gray-200">
+      <div class="post-footer">
         <i class="fa-regular fa-comment-dots pr-2"></i>
         <p class="md:text-sm text-xs">Comment</p>
       </div>
-      <div class="flex cursor-pointer pt-3 px-2 my-1.5 mx-2 rounded-md hover:bg-gray-200">
+      <div class="post-footer">
         <i class="fa-solid fa-repeat pr-2"></i>
         <p class="md:text-sm text-xs">Repost</p>
       </div>
-      <div class="flex cursor-pointer pt-3 px-2 my-1.5 mx-2 rounded-md hover:bg-gray-200">
+      <div class="post-footer">
         <i class="fa-regular fa-paper-plane pr-2"></i>
         <p class="md:text-sm text-xs">Share</p>
       </div>

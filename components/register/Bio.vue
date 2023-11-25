@@ -11,9 +11,7 @@ let qDateClose = ref(true);
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 justify-items-center content-center min-h-[28rem] max-h-[50rem]"
-  >
+  <div class="auth-inputs">
     <Image src="/images/interwave-logo.jpg" alt="logo" class="w-[8rem]" />
     <div class="q-pa-md" style="max-width: 400px; min-width: 300px">
       <div class="q-gutter-sm mt-3 lg:text-body1 text-subtitle2">
@@ -23,7 +21,7 @@ let qDateClose = ref(true);
           size="sm"
           :val="val"
           :label="val"
-          class="border lg:pr-6 lg:pl-3 pr-3 pl-0 pt-1 pb-1"
+          class="border border-gray-400 border-solid lg:pr-6 lg:pl-3 pr-3 pl-0 pt-1 pb-1"
         />
       </div>
 
@@ -33,15 +31,11 @@ let qDateClose = ref(true);
         v-model="DOB"
         :value="DOB"
         label="Date of birth"
-        class="mt-6 input-width border"
+        class="mt-6 border border-gray-400 border-solid"
       >
         <template v-slot:append>
           <q-icon name="event" class="cursor-pointer">
-            <q-popup-proxy
-              cover
-              transition-show="scale"
-              transition-hide="scale"
-            >
+            <q-popup-proxy cover transition-show="scale" transition-hide="scale">
               <q-date
                 v-model="DOB"
                 mask="DD-MM-YYYY"
@@ -60,17 +54,3 @@ let qDateClose = ref(true);
     </div>
   </div>
 </template>
-
-<style scoped>
-.input-width {
-  width: 350px;
-}
-.border {
-  border: 1px solid gray;
-}
-@media screen and (max-width: 1024px) {
-  .input-width {
-    width: 280px;
-  }
-}
-</style>

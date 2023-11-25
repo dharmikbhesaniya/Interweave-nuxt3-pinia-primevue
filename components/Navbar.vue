@@ -1,7 +1,7 @@
 <template>
-  <div class="flex items-center w-full">
+  <div class="main-navbar">
     <NuxtLink to="/" class="no-underline">
-      <h2 class="md:text-2xl text-xl ml-10 cursor-pointer text-black mr-4 mb-1">
+      <h2 class="navbar-heading">
         Intractify
       </h2>
     </NuxtLink>
@@ -23,7 +23,7 @@
         </svg>
         <input
           type="search"
-          class="outline-none input border border-gray-300 lg:w-[20rem] md:w-[15rem] sm:w-[15rem] w-[10rem] rounded-3xl pl-12"
+          class="navbar-input"
           placeholder="Search"
           name="search"
           id="search"
@@ -38,7 +38,7 @@
         <p>Blog</p>
       </NuxtLink>
     </div>
-    <div class="menu ml-auto cursor-pointer">
+    <div class="ml-auto cursor-pointer">
       <Image
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KOWWKm_0832Msjnhv-MtIxzQY_Wjx72hLLm4x5JODwxSgmGnsyEoPHKP0Wu3zKsuW_c&usqp=CAU"
         alt="User Profile"
@@ -49,13 +49,3 @@
 </template>
 
 <script setup></script>
-
-<style scoped>
-.input {
-  border: 1px solid gray;
-  padding: 10px 15px;
-  margin: 10px 0;
-  border-radius: 4px;
-  background-color: rgb(239, 243, 244);
-}
-</style>
